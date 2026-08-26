@@ -1,0 +1,95 @@
+/* =========================================================================
+   Official Print Stylesheet (@media print) — PT Prima Larvae
+   Optimized for formal A4 report and Paspor Siklus (§11) export
+   ========================================================================= */
+
+@media print {
+  /* Hide interactive chrome */
+  .sidebar,
+  .sidebar-overlay,
+  .app-header,
+  .btn,
+  .riwayat-toolbar,
+  .riwayat-actions-top,
+  .riwayat-row-btn,
+  .batch-chip,
+  .header-icon-btn,
+  .asisten-footer-dock,
+  .asisten-prompt-chips,
+  .no-print,
+  button {
+    display: none !important;
+  }
+
+  body, html {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .app-layout {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  /* Table print optimization */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 6px 8px !important;
+    font-size: 9.5pt !important;
+  }
+
+  th {
+    background: #f1f5f9 !important;
+    font-weight: 700 !important;
+  }
+
+  /* Official document container */
+  .riwayat-table-container,
+  .paspor-modal-content,
+  .laporan-view-container {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Clean print letterhead */
+  .print-only-header {
+    display: block !important;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #0f172a;
+  }
+}
+
+.print-only-header {
+  display: none;
+}

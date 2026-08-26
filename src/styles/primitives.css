@@ -1,0 +1,11 @@
+/* =========================================================================
+   SHARED DASHBOARD PRIMITIVES (dipakai oleh semua dashboard peran)
+   Skill Directive: /design-taste-frontend
+   Global agar tiap folder peran hanya menyimpan gaya khas perannya.
+   Token warna/spacing berasal dari ./tokens.css
+   ========================================================================= */
+
+@import './primitivesBase.css';
+@import './primitivesCards.css';
+@import './primitivesForms.css';
+@import './primitivesOperator.css';

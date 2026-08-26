@@ -1,0 +1,17 @@
+{
+  "name": "PT Prima Larvae Hatchery System",
+  "short_name": "Prima Larvae",
+  "description": "Sistem Operasional Pembenihan Udang dan Pengendalian Mutu Terpadu",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f9",
+  "theme_color": "#2563eb",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

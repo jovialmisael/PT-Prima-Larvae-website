@@ -1,0 +1,157 @@
+/* =========================================================================
+   FORMULIR BERTUMPUK — satu KOTAK per formulir asal
+   Judul formulir berdiri di luar kotak, field-nya dikurung di dalam kotak.
+   Seluruh nilai diambil dari tokens.css supaya halaman ini ikut berubah
+   saat tema diubah.
+   ========================================================================= */
+
+.sf-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-5) var(--space-6);
+}
+
+.sf-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Kepala blok: judul di LUAR kotak --- */
+
+.sf-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.sf-section-titles {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.sf-section-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+
+.sf-section-meta {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.sf-section-count {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* --- Badan blok: kotak yang mengurung field --- */
+
+.sf-section-body {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+/* Rel penanda: menyala begitu formulir ini punya isian, jadi operator bisa
+   melihat sekilas formulir mana yang ikut terkirim hari ini. Memakai
+   inset shadow, bukan border, supaya lebar kotak tidak bergeser. */
+.sf-section.is-active > .sf-section-body {
+  box-shadow: inset 3px 0 0 var(--primary);
+}
+
+.sf-section.is-active .sf-section-count {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Blok yang belum disentuh diredam supaya mata jatuh ke yang sedang diisi. */
+.sf-section.is-idle .sf-section-title {
+  color: var(--text-muted);
+}
+
+.sf-section.is-idle .sf-grid {
+  opacity: 0.72;
+  transition: opacity var(--transition-fast);
+}
+
+.sf-section.is-idle:hover .sf-grid,
+.sf-section.is-idle:focus-within .sf-grid {
+  opacity: 1;
+}
+
+/* --- Sub-kelompok di dalam satu kotak --- */
+
+.sf-subgroup + .sf-subgroup {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border-color);
+}
+
+.sf-subgroup-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-3);
+}
+
+/* --- Grid field --- */
+/* Form isian sengaja lebih lega daripada tabel pemantauan (dokumen 14). */
+
+/* Kolom mengisi sendiri menurut lebar tersedia, bukan jumlah tetap. Field
+   sempit (angka + satuan) jadi rapat sebaris alih-alih meninggalkan satu field
+   yatim di baris berikutnya — itu yang bikin form terlihat berantakan. */
+.sf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4) var(--space-4);
+  /* Tiap sel setinggi isinya sendiri; sel dengan alert ambang tidak
+     meregangkan tetangganya sebaris. */
+  align-items: start;
+}
+
+.sf-cell {
+  min-width: 0;
+}
+
+/* Label boleh turun ke dua baris, tetapi jatah tingginya tetap sama di seluruh
+   baris — sehingga kotak input di satu baris selalu mulai pada garis yang sama
+   dan tidak ada yang tampak menimpa tetangganya. */
+.sf-grid .ui-label-row {
+  align-items: flex-start;
+  min-height: calc(var(--text-xs) * 2 * 1.35);
+}
+
+.sf-grid .ui-label {
+  align-items: flex-start;
+  line-height: 1.35;
+}
+
+.sf-cell.is-wide {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 640px) {
+  .sf-grid { grid-template-columns: 1fr; }
+  .sf-sections { padding: var(--space-2) var(--space-3) var(--space-4); gap: var(--space-5); }
+  .sf-section-body { padding: var(--space-4); }
+  .sf-section-head { align-items: flex-start; flex-direction: column; gap: var(--space-1); }
+}

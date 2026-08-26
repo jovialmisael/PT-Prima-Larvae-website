@@ -1,0 +1,57 @@
+/* =========================================================================
+   TIER 2: KEPALA PRODUKSI — role-specific styles only.
+   Shared metric/queue/threshold styles live in src/styles/primitives.css.
+   Skill Directive: /design-taste-frontend
+   ========================================================================= */
+
+/* Survival Rate per stadia progress list */
+.sr-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sr-row {
+  display: grid;
+  grid-template-columns: 160px 1fr 110px;
+  align-items: center;
+  gap: 14px;
+}
+
+@media (max-width: 700px) {
+  .sr-row { grid-template-columns: 1fr; gap: 6px; }
+}
+
+.sr-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.sr-bar-track {
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.sr-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.sr-bar-fill.good { background: var(--status-normal); }
+.sr-bar-fill.warn { background: var(--status-waspada); }
+
+.sr-value {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-align: right;
+}
+
+.sr-target {
+  color: var(--text-muted);
+  font-weight: 600;
+}

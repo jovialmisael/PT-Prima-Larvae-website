@@ -1,0 +1,1 @@
+export { JadwalBerkalaPage } from './JadwalBerkalaPage';

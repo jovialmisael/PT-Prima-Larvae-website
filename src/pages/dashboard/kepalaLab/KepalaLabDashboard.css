@@ -1,0 +1,55 @@
+/* =========================================================================
+   TIER 2: KEPALA LAB — role-specific styles only.
+   Shared metric/queue/threshold styles live in src/styles/primitives.css.
+   Skill Directive: /design-taste-frontend
+   ========================================================================= */
+
+/* PCR pathogen panel */
+.pcr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--space-4);
+}
+
+.pcr-item {
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.02);
+}
+
+.pcr-item.neg {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.pcr-item.pos {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.pcr-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.pcr-patogen {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.pcr-hasil {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.pcr-item.neg .pcr-hasil { color: var(--status-normal); }
+.pcr-item.pos .pcr-hasil { color: var(--status-bahaya); }
+
+.pcr-metode {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

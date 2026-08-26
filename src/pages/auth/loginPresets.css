@@ -1,0 +1,70 @@
+/* Quick Role Chips Bar */
+.quick-roles-container {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed #e2e8f0;
+}
+
+.quick-roles-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quick-chips-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.role-chip-btn {
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 0.725rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.role-chip-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.role-chip-btn.active {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #1d4ed8;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.15);
+}
+
+.role-chip-icon {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.role-chip-area {
+  font-size: 0.66rem;
+  font-weight: 600;
+  opacity: 0.7;
+  padding-left: 5px;
+  margin-left: 1px;
+  border-left: 1px solid currentColor;
+}

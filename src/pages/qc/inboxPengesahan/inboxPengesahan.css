@@ -1,0 +1,74 @@
+/* Inbox Pengesahan Styles */
+.inbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.inbox-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+
+.inbox-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 14px 18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.detail-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 14px;
+  background: var(--bg-app);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.detail-field-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-field-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.detail-field-val {
+  font-size: var(--text-sm);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* State kosong & galat untuk antrean pengesahan */
+.inbox-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.inbox-error {
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  color: var(--status-bahaya);
+  font-size: var(--text-sm);
+}

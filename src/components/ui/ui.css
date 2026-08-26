@@ -1,0 +1,15 @@
+/* =========================================================================
+   UI COMPONENTS & PRIMITIVES INDEX — PT PRIMA LARVAE PANEL
+   Modular CSS Architecture (Clean & Maintainable)
+   ========================================================================= */
+
+@import './button.css';
+@import './badge.css';
+@import './card.css';
+@import './input.css';
+@import './schemaForm.css';
+@import './schemaFormSections.css';
+@import './dataTable.css';
+@import './modal.css';
+@import './signaturePad.css';
+@import './skeleton.css';

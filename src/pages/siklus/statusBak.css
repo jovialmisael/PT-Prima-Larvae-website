@@ -1,0 +1,566 @@
+/* =========================================================================
+   Status Bak & Siklus Berjalan — Clean Industrial Telemetry Styles
+   Aligned with Design System tokens (tokens.css, primitivesCards.css)
+   ========================================================================= */
+
+.status-bak-page {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header */
+.status-bak-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding: var(--space-4) var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.status-bak-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.status-bak-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--primary-faded);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.status-bak-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  margin: 0 0 2px 0;
+  letter-spacing: -0.02em;
+}
+
+.status-bak-sub {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.status-bak-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.status-bak-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 34px;
+  padding: 0 var(--space-4);
+  background: var(--primary);
+  border: 1px solid var(--primary-hover);
+  border-radius: var(--radius-md);
+  color: #ffffff;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-fast);
+}
+
+.status-bak-btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.status-bak-btn-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 34px;
+  padding: 0 var(--space-3);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.status-bak-btn-refresh:hover {
+  background: var(--bg-surface);
+  color: var(--primary);
+  border-color: var(--primary-border);
+}
+
+/* Metric KPI Cards */
+.status-bak-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.status-bak-stat-card {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.status-bak-stat-val {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--text-heading);
+  font-family: var(--font-mono);
+  line-height: 1.1;
+}
+
+.status-bak-stat-lbl {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-bak-stat-card--aktif {
+  border-color: var(--primary-border);
+  background: linear-gradient(180deg, var(--bg-surface), var(--primary-faded));
+}
+.status-bak-stat-card--aktif .status-bak-stat-val {
+  color: var(--primary);
+}
+
+.status-bak-stat-card--siap {
+  border-color: var(--status-normal-border);
+  background: linear-gradient(180deg, var(--bg-surface), var(--status-normal-bg));
+}
+.status-bak-stat-card--siap .status-bak-stat-val {
+  color: var(--status-normal);
+}
+
+.status-bak-stat-card--maint {
+  border-color: var(--status-waspada-border);
+  background: linear-gradient(180deg, var(--bg-surface), var(--status-waspada-bg));
+}
+.status-bak-stat-card--maint .status-bak-stat-val {
+  color: var(--status-waspada);
+}
+
+/* Filter Control Bar */
+.status-bak-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.status-bak-filter-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.status-bak-filter-lbl {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 6px;
+}
+
+.status-bak-pill {
+  padding: 4px 10px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.status-bak-pill:hover {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.status-bak-pill.active {
+  background: var(--text-main);
+  border-color: var(--text-main);
+  color: #ffffff;
+}
+
+/* Grid of Telemetry Tank Cards */
+.status-bak-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.bak-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-3);
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: var(--shadow-xs);
+  box-sizing: border-box;
+}
+
+.bak-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.bak-card--aktif {
+  border-color: var(--primary-border);
+}
+
+.bak-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.bak-ruang-tag {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  background: var(--primary-faded);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--primary-border);
+  text-transform: uppercase;
+}
+
+.bak-nama {
+  font-size: var(--text-base);
+  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  margin: 4px 0 0 0;
+}
+
+.bak-status-badge {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.bak-status-badge--aktif {
+  background: var(--status-normal-bg);
+  color: var(--status-normal);
+  border: 1px solid var(--status-normal-border);
+}
+
+.bak-status-badge--siap {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.bak-status-badge--maintenance {
+  background: var(--status-waspada-bg);
+  color: var(--status-waspada);
+  border: 1px solid var(--status-waspada-border);
+}
+
+/* Telemetry Mini Grid inside Bak Card */
+.bak-metric-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-1);
+  padding: var(--space-2);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.bak-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bak-metric-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.bak-sparkline {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.bak-metric-lbl {
+  font-size: var(--text-2xs);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 600;
+}
+
+.bak-metric-val {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+
+.bak-active-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: var(--text-xs);
+  padding-top: var(--space-1);
+}
+
+.bak-stadia-row,
+.bak-batch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bak-stadia-lbl,
+.bak-batch-lbl {
+  font-size: var(--text-2xs);
+  color: var(--text-muted);
+}
+
+.bak-stadia-val {
+  font-weight: 700;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.bak-batch-val {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--primary);
+  font-size: var(--text-xs);
+}
+
+.bak-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-subtle);
+  color: var(--primary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+/* Siklus Grid */
+.siklus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.siklus-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-xs);
+  box-sizing: border-box;
+}
+
+.siklus-card:hover {
+  border-color: var(--primary);
+}
+
+.siklus-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.siklus-doc-badge {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary);
+  background: var(--primary-faded);
+  border: 1px solid var(--primary-border);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.siklus-kode {
+  font-size: var(--text-base);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--text-heading);
+  margin: 4px 0 0 0;
+}
+
+.siklus-status-badge {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.siklus-status-badge--aktif {
+  background: var(--status-normal-bg);
+  color: var(--status-normal);
+  border: 1px solid var(--status-normal-border);
+}
+
+.siklus-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.siklus-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-xs);
+}
+
+.siklus-info-lbl {
+  color: var(--text-muted);
+  font-size: var(--text-2xs);
+}
+
+.siklus-info-val {
+  font-weight: 600;
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+.siklus-info-val--sr {
+  font-weight: 700;
+  color: var(--status-normal);
+  font-family: var(--font-mono);
+}
+
+.siklus-card-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.siklus-btn-paspor {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  background: var(--primary-faded);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-md);
+  color: var(--primary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.siklus-btn-paspor:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.siklus-btn-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  padding: 0 var(--space-3);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.status-bak-empty {
+  padding: var(--space-10) var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .status-bak-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

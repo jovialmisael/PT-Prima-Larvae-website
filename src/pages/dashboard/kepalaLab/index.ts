@@ -1,0 +1,1 @@
+export { KepalaLabDashboard } from './KepalaLabDashboard';

@@ -1,0 +1,144 @@
+/* Form Panel Structure & Header */
+.login-form-panel {
+  grid-column: 1;
+  padding: 36px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.panel-header, .brand-wrapper, .form-label-row, .remember-row, .panel-footer {
+  display: flex;
+  align-items: center;
+}
+
+.panel-header, .form-label-row, .panel-footer {
+  justify-content: space-between;
+}
+
+.brand-wrapper { gap: 12px; }
+
+.brand-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.725rem;
+  color: #64748b;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.server-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 11px;
+  border-radius: 9999px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  font-size: 0.725rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+.form-content {
+  max-width: 400px;
+  width: 100%;
+  margin: auto 0;
+  padding: 8px 0;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+  letter-spacing: -0.02em;
+}
+
+.form-description {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0 0 18px 0;
+  line-height: 1.45;
+}
+
+.error-alert {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  font-size: 0.825rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label-row { 
+  font-size: 0.75rem; 
+  font-weight: 700; 
+  color: #334155; 
+  letter-spacing: 0.03em;
+}
+
+.forgot-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover { 
+  color: #1d4ed8;
+  text-decoration: underline; 
+}

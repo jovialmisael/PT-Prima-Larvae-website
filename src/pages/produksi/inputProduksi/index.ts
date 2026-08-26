@@ -1,0 +1,1 @@
+export { InputProduksi } from './InputProduksi';

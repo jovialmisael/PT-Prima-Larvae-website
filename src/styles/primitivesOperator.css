@@ -1,0 +1,120 @@
+/* --- Operator Console Primitives --- */
+.shift-card {
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid var(--border-color);
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  text-align: right;
+}
+
+.shift-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.shift-time {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.shift-status {
+  font-size: 0.725rem;
+  color: var(--status-normal);
+  font-weight: 600;
+}
+
+.petugas-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+@media (max-width: 900px) {
+  .petugas-grid-layout { grid-template-columns: 1fr; }
+}
+
+.petugas-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bak-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bak-item-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bak-item-card:hover {
+  background: var(--bg-surface-hover);
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+.bak-item-card.active {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: var(--primary);
+}
+
+.bak-item-card.bahaya {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.08);
+}
+
+.bak-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bak-id {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--primary);
+  width: 48px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(37, 99, 235, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bak-name {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--text-main);
+}
+
+.bak-time {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+.bak-item-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metric-preview {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

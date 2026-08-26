@@ -1,0 +1,45 @@
+/* --- Data Table --- */
+.data-table-container {
+  overflow-x: auto;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-state-text {
+  font-family: var(--font-display);
+  color: var(--status-netral);
+  font-size: var(--text-lg);
+  opacity: 0.5;
+}
+
+.table-dense {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table-dense thead th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: var(--gradient-glass);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.table-dense tbody td {
+  padding: var(--space-3) var(--space-4);
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+.table-dense tbody tr:last-child td { border-bottom: none; }
+.table-dense tbody tr:hover { background: var(--bg-surface-hover); }

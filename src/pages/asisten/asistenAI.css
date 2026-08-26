@@ -1,0 +1,285 @@
+/* =========================================================================
+   Asisten AI — Full-Height Borderless Conversational Workspace
+   Aligned with Design System tokens (tokens.css)
+   ========================================================================= */
+
+.asisten-workspace {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  background: var(--bg-surface);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stream of Conversation Turns */
+.asisten-stream {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6) var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.asisten-stream-inner {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-bottom: var(--space-8);
+}
+
+/* Individual Turn */
+.asisten-turn {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.asisten-turn--user {
+  flex-direction: row-reverse;
+}
+
+.asisten-turn-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.asisten-turn--ai .asisten-turn-avatar {
+  background: var(--primary-faded);
+  border: 1px solid var(--primary-border);
+  color: var(--primary);
+}
+
+.asisten-turn--user .asisten-turn-avatar {
+  background: var(--text-main);
+  color: #ffffff;
+}
+
+.asisten-turn-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 75%;
+}
+
+.asisten-turn--user .asisten-turn-content {
+  align-items: flex-end;
+}
+
+.asisten-turn-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.asisten-turn-name {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.asisten-turn-time {
+  font-size: var(--text-2xs);
+  color: var(--text-tertiary);
+  font-family: var(--font-mono);
+}
+
+.asisten-turn-body {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.asisten-turn--ai .asisten-turn-body {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-top-left-radius: var(--radius-xs);
+}
+
+.asisten-turn--user .asisten-turn-body {
+  background: var(--primary);
+  color: #ffffff;
+  border-top-right-radius: var(--radius-xs);
+}
+
+/* Typing Indicator */
+.asisten-typing-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.asisten-typing-dots .dot {
+  width: 5px;
+  height: 5px;
+  background: var(--text-muted);
+  border-radius: var(--radius-full);
+  animation: turnTyping 1.4s infinite ease-in-out;
+}
+
+.asisten-typing-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.asisten-typing-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes turnTyping {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-4px); }
+}
+
+/* Docked Footer Input */
+.asisten-footer-dock {
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  padding: var(--space-3) var(--space-8) var(--space-4) var(--space-8);
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.asisten-footer-inner {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Prompt Chips */
+.asisten-prompt-chips {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  overflow-x: auto;
+  padding-bottom: 2px;
+  white-space: nowrap;
+}
+
+.asisten-chips-lbl {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 4px;
+}
+
+.asisten-chip-btn {
+  padding: 4px 10px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.asisten-chip-btn:hover {
+  background: var(--bg-surface);
+  color: var(--primary);
+  border-color: var(--primary-border);
+}
+
+.asisten-chip-reset {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.asisten-chip-reset:hover {
+  color: var(--status-bahaya);
+  border-color: var(--status-bahaya-border);
+}
+
+/* Input Wrap */
+.asisten-input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 4px 6px 4px var(--space-3);
+  transition: var(--transition-fast);
+}
+
+.asisten-input-wrap:focus-within {
+  border-color: var(--primary);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 2px var(--primary-faded);
+}
+
+.asisten-text-input {
+  flex: 1;
+  height: 38px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: var(--text-xs);
+  color: var(--text-main);
+}
+
+.asisten-send-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background: var(--primary);
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.asisten-send-btn:hover {
+  background: var(--primary-hover);
+}
+
+.asisten-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .asisten-stream {
+    padding: var(--space-4);
+  }
+  .asisten-footer-dock {
+    padding: var(--space-3) var(--space-4);
+  }
+  .asisten-turn-content {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,1 @@
+export { PetugasLabDashboard } from './PetugasLabDashboard';

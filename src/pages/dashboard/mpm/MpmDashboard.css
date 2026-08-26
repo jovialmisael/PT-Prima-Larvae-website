@@ -1,0 +1,76 @@
+/* =========================================================================
+   TIER 2: MPM / QC — role-specific styles only.
+   Shared metric/queue/threshold styles live in src/styles/primitives.css.
+   Skill Directive: /design-taste-frontend
+   ========================================================================= */
+
+/* Biosecurity checklist (togglable) */
+.biosec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.biosec-item {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  background: rgba(15, 23, 42, 0.02);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.biosec-item:hover { background: var(--bg-surface-hover); }
+
+.biosec-item.patuh {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.biosec-item.belum {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.biosec-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.biosec-item.patuh .biosec-check {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--status-normal);
+}
+
+.biosec-item.belum .biosec-check {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--status-waspada);
+}
+
+.biosec-aspek {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.biosec-status {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.biosec-item.patuh .biosec-status { color: var(--status-normal); }
+.biosec-item.belum .biosec-status { color: var(--status-waspada); }

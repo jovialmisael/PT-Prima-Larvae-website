@@ -1,0 +1,135 @@
+/* --- Card & Metric Primitives --- */
+.card-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.count-badge {
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+}
+
+.active-bak-tag {
+  font-size: var(--text-2xs);
+  background: var(--primary-faded);
+  border: 1px solid var(--primary-border);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  color: var(--primary);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.metric-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-large {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-heading);
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.metric-sub {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.approval-status-box {
+  background: var(--status-waspada-bg);
+  border: 1px solid var(--status-waspada-border);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.status-number {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--status-waspada);
+  font-family: var(--font-mono);
+}
+
+.status-label {
+  font-size: var(--text-2xs);
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.queue-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.queue-badge {
+  font-size: var(--text-2xs);
+  font-family: var(--font-mono);
+  background: var(--status-waspada-bg);
+  border: 1px solid var(--status-waspada-border);
+  color: var(--status-waspada);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+}
+
+.text-danger {
+  color: var(--status-bahaya);
+  font-weight: 700;
+}
+
+/* Daftar pintasan tugas di dashboard peran */
+.dash-shortcut-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.dash-shortcut-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.dash-shortcut-list li:hover {
+  border-color: var(--primary-border);
+  background: var(--bg-surface-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-xs);
+}
+
+.dash-shortcut-list a {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--text-heading);
+  text-decoration: none;
+}
+
+.dash-shortcut-list a:hover {
+  color: var(--primary);
+}
+

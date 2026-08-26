@@ -1,0 +1,34 @@
+/* --- Badge Primitives --- */
+.ui-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.ui-badge-normal {
+  background-color: var(--status-normal-bg);
+  color: var(--status-normal);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+}
+.ui-badge-waspada {
+  background-color: var(--status-waspada-bg);
+  color: var(--status-waspada);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+.ui-badge-bahaya {
+  background-color: var(--status-bahaya-bg);
+  color: var(--status-bahaya);
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+.ui-badge-netral {
+  background-color: var(--status-netral-bg);
+  color: var(--status-netral);
+  border: 1px solid rgba(100, 116, 139, 0.25);
+}
